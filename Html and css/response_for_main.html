@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column; /* Default to column layout for small screens */
+        gap: 20px;
+        margin: 0 auto;
+        max-width: 1200px;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    
+    .left-content, .right-content {
+        flex: 1;
+        min-height: 500px;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    
+    .right-content {
+        padding-top: 60px;
+    }
+    
+    /* Media query for larger screens */
+    @media (min-width: 768px) {
+        .container {
+            flex-direction: row; /* Switch to row layout for larger screens */
+        }
+        
+        .left-content, .right-content {
+            min-height: auto;
+            padding-top: 0;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <!-- Left Content -->
+    <div class="left-content">
+        <!-- Decorative Line and Welcome Message -->
+        <div style="display: inline-block; width: 10px; height: 100px; background-color: #225aa0; vertical-align: middle;"></div>
+        <span style="display: inline-block; vertical-align: middle; margin-left: 10px; font-size: 36px; line-height: 1.2;">
+            Welcome to<br>
+            <span style="color: #225aa0;">LMNAs</span>
+        </span>
+
+        <!-- Main Content -->
+        <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 20px;">
+            Your Go-to Solution for Digital Business Transformation! We specialize in providing adaptable and accessible solutions that help growing organizations optimize their operations and achieve their goals.<br> Our team is dedicated to driving end-to-end business transformation through innovative and customized digital solutions. With years of experience and a deep understanding of the industry, we pride ourselves on delivering high-quality services that meet the unique needs of our clients.<br> At LMNAs, we believe in staying ahead of the curve and leveraging the latest technologies to help businesses succeed in a constantly evolving marketplace. We work closely with our clients to understand their needs, and our team of experts is committed to delivering personalized solutions that exceed expectations. <br>Whether you're looking to streamline your operations, enhance your customer experience, or improve your bottom line, LMNAs has the tools, expertise, and experience to help you achieve your goals. Contact us today to learn more about how we can help your business grow and thrive in the digital age.
+        </p>
+    </div>
+
+    <!-- Right Content -->
+    <div class="right-content">
+        <!-- Cards Section -->
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <!-- Card 1 -->
+            <div style="padding: 10px; border: none; text-align: left; box-sizing: border-box;">
+                <div style="display: flex; align-items: flex-start; margin-bottom: 5px;">
+                    <div style="width: 40px; height: 40px; background-color: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #225aa0; margin-right: 10px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#225aa0" style="width: 20px; height: 20px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0; color: #333; font-size: 24px;">Diversity First</h4>
+                        <p style="font-size: 16px; line-height: 1.4; color: #555; margin: 0;">
+                            LMNAs is committed to creating an inclusive<br>
+                            environment that values and respects individuals<br>
+                            from various backgrounds.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div style="padding: 10px; border: none; text-align: left; box-sizing: border-box;">
+                <div style="display: flex; align-items: flex-start; margin-bottom: 5px;">
+                    <div style="width: 40px; height: 40px; background-color: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #225aa0; margin-right: 10px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#225aa0" style="width: 20px; height: 20px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0; color: #333; font-size: 24px;">Local Talent First</h4>
+                        <p style="font-size: 16px; line-height: 1.4; color: #555; margin: 0;">
+                            We wanted to grow organically. At LMNAs, we <br>
+                            prioritize local talent where our office is located.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div style="padding: 10px; border: none; text-align: left; box-sizing: border-box;">
+                <div style="display: flex; align-items: flex-start; margin-bottom: 5px;">
+                    <div style="width: 40px; height: 40px; background-color: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #225aa0; margin-right: 10px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#225aa0" style="width: 20px; height: 20px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0; color: #333; font-size: 24px;">Environment First</h4>
+                        <p style="font-size: 16px; line-height: 1.4; color: #555; margin: 0;">
+                            We have taken a bold step to shift our offices to <br>
+                            remote cities By moving our offices to remote <br>
+                            cities, we are not only reducing our carbon <br>
+                            footprint but also providing our employees with a <br>
+                            healthier work environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div style="display: flex; flex-direction: row; gap: 20px; margin: 0 auto; max-width: 1200px; box-sizing: border-box; padding: 10px; padding-top: 70px;">
+    <!-- Left Content -->
+    <div style="flex: 1; min-height: 500px; box-sizing: border-box; padding: 20px;">
+        <!-- Decorative Line and Welcome Message -->
+        <div style="display: inline-block; width: 10px; height: 100px; background-color: #225aa0; vertical-align: middle;"></div>
+        <span style="display: inline-block; vertical-align: middle; margin-left: 10px; font-size: 36px; line-height: 1.2;">
+            Welcome to<br>
+            <span style="color: #225aa0;">LMNAs</span>
+        </span>
+
+        <!-- Main Content -->
+        <p style="font-size: 14px; line-height: 1.5; color: #555; margin-top: 20px;">
+            Your Go-to Solution for Digital Business Transformation! We specialize in providing adaptable and accessible solutions that help growing organizations optimize their operations and achieve their goals.<br> Our team is dedicated to driving end-to-end business transformation through innovative and customized digital solutions. With years of experience and a deep understanding of the industry, we pride ourselves on delivering high-quality services that meet the unique needs of our clients.<br> At LMNAs, we believe in staying ahead of the curve and leveraging the latest technologies to help businesses succeed in a constantly evolving marketplace. We work closely with our clients to understand their needs, and our team of experts is committed to delivering personalized solutions that exceed expectations. <br>Whether you're looking to streamline your operations, enhance your customer experience, or improve your bottom line, LMNAs has the tools, expertise, and experience to help you achieve your goals. Contact us today to learn more about how we can help your business grow and thrive in the digital age.
+        </p>
+    </div>
+
+    <!-- Right Content -->
+    <div style="flex: 1; min-height: 500px; box-sizing: border-box; padding: 20px; padding-top: 60px;">
+        <!-- Cards Section -->
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <!-- Card 1 -->
+            <div style="padding: 10px; border: none; text-align: left; box-sizing: border-box;">
+                <div style="display: flex; align-items: flex-start; margin-bottom: 5px;">
+                    <div style="width: 40px; height: 40px; background-color: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #225aa0; margin-right: 10px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#225aa0" style="width: 20px; height: 20px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0; color: #333; font-size: 24px;">Diversity First</h4>
+                        <p style="font-size: 16px; line-height: 1.4; color: #555; margin: 0;">
+                            LMNAs is committed to creating an inclusive<br>
+                            environment that values and respects individuals<br>
+                            from various backgrounds.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div style="padding: 10px; border: none; text-align: left; box-sizing: border-box;">
+                <div style="display: flex; align-items: flex-start; margin-bottom: 5px;">
+                    <div style="width: 40px; height: 40px; background-color: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #225aa0; margin-right: 10px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#225aa0" style="width: 20px; height: 20px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0; color: #333; font-size: 24px;">Local Talent First</h4>
+                        <p style="font-size: 16px; line-height: 1.4; color: #555; margin: 0;">
+                            We wanted to grow organically. At LMNAs, we <br>
+                            prioritize local talent where our office is located.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div style="padding: 10px; border: none; text-align: left; box-sizing: border-box;">
+                <div style="display: flex; align-items: flex-start; margin-bottom: 5px;">
+                    <div style="width: 40px; height: 40px; background-color: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #225aa0; margin-right: 10px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#225aa0" style="width: 20px; height: 20px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0; color: #333; font-size: 24px;">Environment First</h4>
+                        <p style="font-size: 16px; line-height: 1.4; color: #555; margin: 0;">
+                            We have taken a bold step to shift our offices to <br>
+                            remote cities. By moving our offices to remote <br>
+                            cities, we are not only reducing our carbon <br>
+                            footprint but also providing our employees with a <br>
+                            healthier work environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

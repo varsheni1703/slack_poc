@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Master Cypress</title>
+    <style>
+        .timestamp-links {
+            margin: 20px 0;
+        }
+        .timestamp-links a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #1a73e8;
+        }
+        .timestamp-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>How to Master Cypress</h1>
+
+    <p>Learn how to get started with Cypress, a powerful testing framework. This video covers the basics of Cypress, including setup, usage, and key features.</p>
+
+    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/tRI5ruE7yCA?si=6jmuhMrbcg1g3Twq&autoplay=1" title="How to Master Cypress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <div class="timestamp-links">
+        <a href="#" onclick="seekTo(0)">00:00 - Introduction</a>
+        <a href="#" onclick="seekTo(50)">00:50 - Topics</a>
+        <a href="#" onclick="seekTo(358)">05:58 - What is Cypress</a>
+        <a href="#" onclick="seekTo(559)">09:19 - How to use Cypress</a>
+        <a href="#" onclick="seekTo(593)">09:53 - Supported Browsers</a>
+        <a href="#" onclick="seekTo(672)">11:12 - Cypress Features</a>
+        <a href="#" onclick="seekTo(839)">14:19 - Prerequisites</a>
+        <a href="#" onclick="seekTo(1205)">20:05 - IDE - VS Code</a>
+        <a href="#" onclick="seekTo(1830)">30:30 - Cypress Project Setup</a>
+        <a href="#" onclick="seekTo(3003)">50:03 - Cypress Folder Structure</a>
+        <a href="#" onclick="seekTo(3118)">51:58 - 1st Test in Cypress</a>
+        <a href="#" onclick="seekTo(4357)">01:12:37 - How to Access Elements</a>
+    </div>
+
+    <script>
+        function seekTo(seconds) {
+            const iframe = document.getElementById('video');
+            iframe.src = `https://www.youtube.com/embed/tRI5ruE7yCA?si=6jmuhMrbcg1g3Twq&start=${seconds}&autoplay=1`;
+        }
+    </script>
+</body>
+</html>

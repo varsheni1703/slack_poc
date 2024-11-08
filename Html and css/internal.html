@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is LENS | About LMNAs</title>
+    <link rel="icon" href="img/logo.png">
+    <style>
+        /* Internal CSS */
+        body {
+            font-family:  Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: white;
+            
+        }
+
+        nav .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo-container a {
+            color: #1a3c5d;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav .menu-container {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .menu-container ul {
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav .menu-container ul li {
+            margin: 0 10px;
+        }
+
+        nav .menu-container ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        nav .right-section {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        nav .right-section img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        nav .right-section select {
+            display: inline-block;
+            vertical-align: middle;
+            border: 0;
+            background-color: white;
+            margin-left: 5px;
+            font-size: 16px;
+        }
+
+        nav .right-section .contact-button {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
+        nav .right-section .contact-button a button {
+            background-color: rgb(34, 90, 160);
+            color: white;
+            border-radius: 5px;
+            border: 0;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Hamburger Menu Styles */
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px;
+        }
+
+        .menu-container ul {
+            flex-direction: row;
+        }
+
+        @media (max-width: 768px) {
+            nav .menu-container ul {
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                border-top: 1px solid #ccc;
+                display: none;
+                z-index: 999;
+            }
+
+            nav .menu-container ul li {
+                text-align: center;
+                margin: 15px 0;
+            }
+
+            .menu-icon {
+                display: flex;
+            }
+
+            .menu-container ul.show {
+                display: flex;
+            }
+
+            nav .right-section {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo-container">
+            <a href="https://lmnas.com/">
+                <svg style="width: 100%; height: 40px;" class="w-10" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1000 1000" fill="currentcolor">
+                    <rect x="126.4" y="12.6" class="text-th-tertiary" fill="#1a3c5d" width="285.9" height="670.8"></rect>
+                    <rect x="412.3" y="680.9" class="text-th-secondary" fill="#4bade9" width="490.2" height="301.5"></rect>
+                    <polygon class="text-th-primary" fill="#225aa0" points="412.3,680.5 126.4,680.5 412.3,982.4"></polygon>
+                    <rect x="620.2" y="215.3" class="text-th-primary" fill="#225aa0" width="282.3" height="282.3"></rect>
+                </svg>
+            </a>
+            <a href="https://lmnas.com/">LMNAs</a>
+        </div>
+
+        <div class="menu-container">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="menu">
+                <li><a href="https://lmnas.com/#products">Products</a></li>
+                <li><a href="https://lmnas.com/#industries">Industries</a></li>
+                <li><a href="https://lmnas.com/solutions">Solutions</a></li>
+                <li><a href="https://lmnas.com/pricing">Pricing</a></li>
+                <li><a href="https://lmnas.com/aboutus">About Us</a></li>
+                <li><a href="https://lmnas.com/jobs">Jobs</a></li>
+            </ul>
+        </div>
+
+        <div class="right-section">
+            <img src="img/EN.png" alt="EN">
+            <select>
+                <option value="EN">EN</option>
+                <option value="DE">DE</option>
+            </select>
+            <div class="contact-button">
+                <a href="https://nectar.lmnas.com/contact">
+                    <button>Contact Us</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

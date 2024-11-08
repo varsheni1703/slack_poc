@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML and CSS Basics Tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .course-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .course-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .collapsible {
+            background-color: #225aa0;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .active, .collapsible:hover {
+            background-color: #225aa0;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            border-radius: 0 0 5px 5px;
+        }
+        #quiz {
+            margin-top: 20px;
+            background-color: #e9e9e9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        #progress-bar {
+            width: 100%;
+            background-color: #ddd;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        #progress {
+            width: 0%;
+            height: 30px;
+            background-color: #225aa0;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="course-container">
+        <h1>HTML and CSS Basics Tutorial</h1>
+        
+        <img src="https://via.placeholder.com/800x300.png?text=HTML+and+CSS+Basics" alt="HTML and CSS Basics" class="course-image">
+        
+        <div id="progress-bar">
+            <div id="progress">0%</div>
+        </div>
+
+        <button type="button" class="collapsible">1. Introduction to HTML</button>
+        <div class="content">
+            <h3>What is HTML?</h3>
+            <p>HTML stands for HyperText Markup Language. It's the standard markup language for creating web pages.</p>
+            <h3>Basic HTML Structure</h3>
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </div>
+
+        <button type="button" class="collapsible">2. HTML Elements</button>
+        <div class="content">
+            <h3>Common HTML Elements</h3>
+            <ul>
+                <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>: Headings</li>
+                <li><code>&lt;p&gt;</code>: Paragraph</li>
+                <li><code>&lt;a&gt;</code>: Link</li>
+                <li><code>&lt;img&gt;</code>: Image</li>
+                <li><code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code>: Unordered and Ordered Lists</li>
+            </ul>
+        </div>
+
+        <button type="button" class="collapsible">3. Introduction to CSS</button>
+        <div class="content">
+            <h3>What is CSS?</h3>
+            <p>CSS stands for Cascading Style Sheets. It's used to style and layout web pages.</p>
+            <h3>Basic CSS Syntax</h3>
+            <pre><code>
+selector {
+    property: value;
+}
+
+/* Example */
+p {
+    color: blue;
+    font-size: 16px;
+}
+            </code></pre>
+        </div>
+
+        <button type="button" class="collapsible">4. CSS Selectors and Properties</button>
+        <div class="content">
+            <h3>Common CSS Selectors</h3>
+            <ul>
+                <li>Element Selector: <code>p { }</code></li>
+                <li>Class Selector: <code>.classname { }</code></li>
+                <li>ID Selector: <code>#idname { }</code></li>
+            </ul>
+            <h3>Common CSS Properties</h3>
+            <ul>
+                <li><code>color</code>: Text color</li>
+                <li><code>background-color</code>: Background color</li>
+                <li><code>font-size</code>: Size of the font</li>
+                <li><code>margin</code>: Space outside an element</li>
+                <li><code>padding</code>: Space inside an element</li>
+            </ul>
+        </div>
+
+        <div id="quiz">
+            <h2>Quick Quiz</h2>
+            <p>Which tag is used for the largest heading in HTML?</p>
+            <input type="radio" name="q1" value="h6"> &lt;h6&gt;<br>
+            <input type="radio" name="q1" value="h1"> &lt;h1&gt;<br>
+            <input type="radio" name="q1" value="p"> &lt;p&gt;<br>
+            <button onclick="checkAnswer()">Submit Answer</button>
+        </div>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+                updateProgress();
+            });
+        }
+
+        function updateProgress() {
+            var total = coll.length;
+            var opened = document.getElementsByClassName("active").length;
+            var percentage = (opened / total) * 100;
+            document.getElementById("progress").style.width = percentage + "%";
+            document.getElementById("progress").innerHTML = Math.round(percentage) + "%";
+        }
+
+        function checkAnswer() {
+            var radios = document.getElementsByName("q1");
+            for (var i = 0, length = radios.length; i < length; i++) {
+                if (radios[i].checked) {
+                    if (radios[i].value === "h1") {
+                        alert("Correct! <h1> is used for the largest heading in HTML.");
+                    } else {
+                        alert("Incorrect. The correct answer is <h1>.");
+                    }
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
