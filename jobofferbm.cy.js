@@ -7,7 +7,7 @@ describe('Bluemaple Job Offer', () => {
       });
     });
    
-
+//IT starts here
     
     it('PDF of Bluemaple USA', () => {
         cy.get('@testvalue').then((testvalue) => {
